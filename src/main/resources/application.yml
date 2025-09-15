@@ -1,0 +1,23 @@
+spring:
+  datasource:
+       url: jdbc:postgresql://localhost:5432/myappdb
+    username: myappuser
+    password: john1234
+    driver-class-name: org.postgresql.Driver
+
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 3600000   # 1 hour in ms
