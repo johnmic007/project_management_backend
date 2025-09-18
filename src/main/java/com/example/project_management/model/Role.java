@@ -1,18 +1,22 @@
-package com.yourcompany.projectmanagement.model;
+package com.example.project_management.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Table(name = "roles")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Role {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(length = 20, unique = true)
+    @Column(nullable = false, unique = true)
     private RoleEnum name;
 }

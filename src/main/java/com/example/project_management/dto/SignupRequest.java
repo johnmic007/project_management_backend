@@ -1,4 +1,4 @@
-package com.yourcompany.projectmanagement.dto;
+package com.example.project_management.dto;
 
 import lombok.Data;
 
